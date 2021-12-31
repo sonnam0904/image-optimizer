@@ -19,7 +19,7 @@ type OptionCompress struct {
 
 func GetFileTypeByName(path string) (string, error) {
 	// Read the entire file into a byte slice
-	b, err := ioutil.ReadFile("a.png")
+	b, err := ioutil.ReadFile(path)
 	if err != nil {
 		log.Fatal(err)
 		return "Unknown", err
