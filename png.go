@@ -1,4 +1,4 @@
-package compress
+package image_optimizer
 
 import (
 	"bytes"

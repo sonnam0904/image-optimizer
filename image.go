@@ -1,4 +1,4 @@
-package compress
+package image_optimizer
 
 import (
 	"bytes"
@@ -45,7 +45,7 @@ func Do(file multipart.File, fileType string) (output []byte, err error) {
 	switch fileType {
 		case "image/jpeg":
 			input, _ := jpeg.Decode(file)
-			compressed, err := JpgC(input, &jpeg.Options{Quality:30})
+			compressed, err := JpgC(input, &jpeg.Options{Quality: 30})
 			if err != nil {
 				return []byte{}, err
 			}

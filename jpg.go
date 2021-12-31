@@ -1,4 +1,4 @@
-package compress
+package image_optimizer
 // #cgo LDFLAGS: -ljpeg
 // #cgo darwin LDFLAGS: -L/opt/local/lib
 // #cgo darwin CFLAGS: -I/opt/local/include
