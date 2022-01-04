@@ -7,6 +7,7 @@ import (
 	"image/png"
 	"os/exec"
 	"strings"
+	"errors"
 )
 // need setup `apt-get install pngquant`
 // @see https://salsa.debian.org/debian-phototools-team/pngquant or Run pngquant -help command
@@ -79,7 +80,7 @@ func PngByte(input []byte, args []string) (output []byte, err error) {
 	cmd.Stdout = &o
 	err = cmd.Run()
 	if err != nil {
-		return input, err
+		return input, errors.New("Can not compress this image")
 	}
 
 	output = o.Bytes()

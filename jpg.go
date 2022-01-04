@@ -160,7 +160,7 @@ func JpgByte(input []byte, args []string) (output []byte, err error) {
 	err = cmd.Run()
 
 	if err != nil {
-		return input, err
+		return input, errors.New("Can not compress this image")
 	}
 	output = o.Bytes()
 	return output, nil
