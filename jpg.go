@@ -152,7 +152,7 @@ func EncodeBytesOptimized(srcBytes []byte, o *jpeg.Options) (outBytes []byte, er
 
 func JpgByte(input []byte, args []string) (output []byte, err error) {
 	// "-", "--speed", speed
-	cmd := exec.Command("jpegoptim", args...)
+	cmd := exec.Command("/usr/bin/jpegoptim", args...)
 	cmd.Stdin = strings.NewReader(string(input))
 
 	var o bytes.Buffer

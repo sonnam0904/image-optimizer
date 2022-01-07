@@ -73,7 +73,7 @@ func Png(input image.Image, opt OptionCompress) (output image.Image, err error) 
 
 func PngByte(input []byte, args []string) (output []byte, err error) {
 	// "-", "--speed", speed
-	cmd := exec.Command("pngquant", args...)
+	cmd := exec.Command("/usr/bin/pngquant", args...)
 	cmd.Stdin = strings.NewReader(string(input))
 
 	var o bytes.Buffer
